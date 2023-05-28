@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo form</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename ='style.css')}}">
+</head>
+<body>
+    <div class="container">
+        <form action="/result" method="POST">
+            <p>Name:  <input type="text" name="name" id=""></p>
+            <p> Dojo Location
+                <select name="location" id="">
+                    <option value="Palestine">Palestine</option>
+                    <option value="Syria">Syria</option>
+                    <option value="Jordan">Jordan</option>
+                </select>
+            </p>
+            <p> Favorite Language
+                <select name="language" id="">
+                    <option value="Python">Python</option>
+                    <option value="C#">C#</option>
+                    <option value="JAVA">Java</option>
+                </select>
+            </p>
+            <p>comments</p>
+            <textarea name="comments" id="" cols="30" rows="10"></textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
