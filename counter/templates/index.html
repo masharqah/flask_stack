@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Counter</title>
+</head>
+<body>
+    <h1>Number of Visits: {{ count }}</h1>
+    <a href="{{ url_for('destroy_session') }}">Clear Session</a>
+    <form action="{{ url_for('increment') }}" method="GET">
+        <button type="submit">+2</button>
+    </form>
+    <form action="{{ url_for('reset') }}" method="GET">
+        <button type="submit">Reset</button>
+    </form>
+</body>
+</html>
