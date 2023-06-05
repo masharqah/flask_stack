@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>great number game</title>
+</head>
+<body>
+    {% if message %}
+        <p>{{ message }}</p>
+        {% if session.number %}
+            <form method="POST" action="/">
+                <input type="number" name="guess" min="1" max="100" required>
+                <button type="submit">Submit</button>
+            </form>
+        {% else %}
+            <p>Would you like to play again?</p>
+            <a href="/">Play again</a>
+        {% endif %}
+    {% else %}
+        <form method="POST" action="/">
+            <input type="number" name="guess" min="1" max="100" required>
+            <button type="submit">Submit</button>
+        </form>
+    {% endif %}
+</body>
+</html>
